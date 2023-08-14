@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<link rel="stylesheet" href="../static/style.css">
+	<title>Stable Storyboard</title>
+</head>
+
+<body>
+	<main>
+		<div class="titleDiv">
+			<h1>Stable Storyboard</h1>
+			<p>Using Stable Diffusion to generate the images for a storyboard</p>	
+		</div>
+
+		<div class="formDiv">
+			<h3>Starting Form</h3>
+			<form action="/submit-starter-form">
+				<label for="title">Project <Title></Title></label>
+				<input type="text" id="title" name="title">
+				
+				<label for="description">Project Description</label>
+				<textarea id="description" name="description">Insert the description of your project</textarea>
+
+				<label for="storyboard-type">Drawing Style</label>
+				<select name="storyboard-type" id="storyboard-type">
+					<option value="realistic">Realistic</option>
+					<option value="cartoon">Cartoon</option>
+					<option value="anime">Anime</option>
+					<option value="sketch">Sketch</option>
+				</select>
+
+				<label for="storyboard-frames">Frame Descriptions</label>
+				<textarea id="storyboard-frames" name="storyboard-frames">Insert the description for each of your frames here seperated by a plus sign(+).</textarea>
+
+				<input type="submit" value="Submit">
+			</form>
+			
+		</div>
+		
+	</main>
+</body>
