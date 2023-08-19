@@ -30,7 +30,7 @@ def generateFrames(project_title,frame_sentences, style):
 		image = base(prompt=full_prompt, negative_prompt=neg_prompt).images[0]
 		
 		#Save each image into images folder with name prompt#.png
-		image.save(f"images/{frameName}")
+		image.save(f"static/images/{frameName}")
 		#Add name to array
 		nameArray.append(frameName)
     

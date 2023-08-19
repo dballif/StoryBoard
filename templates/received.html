@@ -14,7 +14,8 @@
 			<br>
 			<div class="frames">
 				{% for url in links %}
-				<img src="{{ url }}"/>
+				<p>{{ url_for('static', filename='images/' + url) }}</p>
+				<img src="{{ url_for('static', filename='images/' + url) }}"/>
 				{% endfor %}
 			</div>
 		</div>
