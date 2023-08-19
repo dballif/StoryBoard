@@ -46,3 +46,11 @@ textarea {
 	font-size: 16px;
 	resize: none;
 }
+
+div.InputName {
+	padding: 12px 20px;
+}
+
+div.InputData {
+	display: inline-block;
+}
