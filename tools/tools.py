@@ -17,7 +17,7 @@ def generateFrames(frame_sentences, style):
 		#Insert stable diffusion here
 		base = StableDiffusionPipeline.from_single_file('../data/mdjrny-v4.safetensors', use_safetensors=True) 
 		#Build the prompt
-		base_prompt = "masterpiece, best quality, photorealistic, 8k, detailed, dramatic,"
+		base_prompt = "masterpiece, best quality, 8k, detailed, dramatic,"
 		full_prompt = base_prompt + style + ", " + frame
 
 		#Use a negative prompt to mtry to make picture better

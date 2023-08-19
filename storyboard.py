@@ -1,9 +1,10 @@
 from flask import Flask, request, render_template
-from tools import generateFrames
 import sys
 import html
-
 sys.path.insert(0, 'tools/')
+from tools import generateFrames
+
+
 
 app = Flask(__name__)
 
