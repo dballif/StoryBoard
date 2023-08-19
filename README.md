@@ -31,4 +31,5 @@ will also help.
 
 ### Stable Diffusion Notes
 This project usese the following datasets for creating the images with Stable Diffusion: 
+- [Prompt Hero's OpenJourney](https://huggingface.co/prompthero/openjourney)
 
