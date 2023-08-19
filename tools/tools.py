@@ -4,18 +4,18 @@ from diffusers import StableDiffusionPipeline
 def splitIntoArray(frame_sentences):
     return frame_sentences.split("+")
 
-def generateFrames(frame_sentences, style):
+def generateFrames(project_title,frame_sentences, style):
 	newArray = splitIntoArray(frame_sentences)
-	promptNum = 0;
+	promptNum = 0
 	nameArray = []
     
 	#Loop through the frames and generate images
 	for frame in newArray:
 		promptNum = promptNum + 1
-		frameName = "prompt" + promptNum + ".png"
+		frameName = project_title +"_prompt" + str(promptNum) + ".png"
 
 		#Insert stable diffusion here
-		base = StableDiffusionPipeline.from_single_file('../data/mdjrny-v4.safetensors', use_safetensors=True) 
+		base = StableDiffusionPipeline.from_single_file('./data/mdjrny-v4.safetensors', use_safetensors=True) 
 		#Build the prompt
 		base_prompt = "masterpiece, best quality, 8k, detailed, dramatic,"
 		full_prompt = base_prompt + style + ", " + frame
@@ -30,7 +30,7 @@ def generateFrames(frame_sentences, style):
 		image = base(prompt=full_prompt, negative_prompt=neg_prompt).images[0]
 		
 		#Save each image into images folder with name prompt#.png
-		image.save()
+		image.save(f"images/{frameName}")
 		#Add name to array
 		nameArray.append(frameName)
     
