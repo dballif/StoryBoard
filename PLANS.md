@@ -27,3 +27,4 @@ blockchain, so the Storyboard could be traded.
  - [] Randomize/obfuscate the project title part of the image name. These can be stored seperately and then revisted later
  - [] Authentication?
  - [] Threading?
+ - [] Secure
