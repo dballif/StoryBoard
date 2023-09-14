@@ -15,23 +15,24 @@
 
 		<div class="formDiv">
 			<h3>Starting Form</h3>
-			<form action="/submit-starter-form">
+			<form action="/submit-starter-form" method="POST">
 				<label for="title">Project <Title></Title></label>
-				<input type="text" id="title" name="title">
+				<input type="text" id="title" name="title" required>
 				
 				<label for="description">Project Description</label>
-				<textarea id="description" name="description">Insert the description of your project</textarea>
+				<textarea id="description" name="description" required>Insert the description of your project</textarea>
 
 				<label for="storyboard-type">Drawing Style</label>
-				<select name="storyboard-type" id="storyboard-type">
-					<option value="realistic">Realistic</option>
+				<select name="storyboard-type" id="storyboard-type" required>
+					<option value="photorealistic">Realistic</option>
 					<option value="cartoon">Cartoon</option>
 					<option value="anime">Anime</option>
 					<option value="sketch">Sketch</option>
+					<option value="pixel art">Pixel</option>
 				</select>
 
 				<label for="storyboard-frames">Frame Descriptions</label>
-				<textarea id="storyboard-frames" name="storyboard-frames">Insert the description for each of your frames here seperated by a plus sign(+).</textarea>
+				<textarea id="storyboard-frames" name="storyboard-frames" required>Insert the description for each of your frames here seperated by a plus sign(+).</textarea>
 
 				<input type="submit" value="Submit">
 			</form>
