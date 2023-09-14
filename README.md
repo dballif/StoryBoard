@@ -20,14 +20,14 @@ VERY IMPORTANT: This is not a production level project. It is currently meant to
 machine. It is not secure at this point in the project. That will come later as a way to practice those skills.
 
 The backend of this particular application is using Python and will hook into either the
-CPU or GPU as specified. Each image for each storyboard frame will take a fairly long
-time to load depending on the users hardware.
-
-The best option is to use a dedicated GPU when possible.
+CPU or GPU as available. Each image for each storyboard frame will take a fairly long
+time to load depending on the users hardware. If you have a CUDA compatible GPU(Nvidia) and you have installed torch
+with CUDA capabilities, it should default to using that which will be much faster. Otherwise, it will run on the CPU
+which will take forever and a day.
 
 Also, this is still "AI" generated imagery. It will probably have issues. Choosing or training a better
 data set is probably not a bad idea, but mdjrny will do for now. Changes to the base prompt and negative prompt
-will also help.
+will also help and will need to be optimized in the future.
 
 ### Stable Diffusion Notes
 This project usese the following datasets for creating the images with Stable Diffusion: 

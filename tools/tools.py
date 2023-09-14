@@ -1,5 +1,6 @@
 import html
 from diffusers import StableDiffusionPipeline
+import torch
 
 def splitIntoArray(frame_sentences):
     return frame_sentences.split("+")
@@ -24,7 +25,8 @@ def generateFrames(project_title,frame_sentences, style):
 		neg_prompt = "low res, ugly, bad hands, too many digits, bad teeth, blurry, blurred background"
 		
 		#V1 - Use cpu
-		base.to("cpu")
+		device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+		base.to(device)
 
 		#Create the image
 		image = base(prompt=full_prompt, negative_prompt=neg_prompt).images[0]
